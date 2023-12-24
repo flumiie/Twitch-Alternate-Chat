@@ -1,0 +1,225 @@
+/* ==UserStyle==
+@name           ? - Dec 2023
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    A new userstyle
+@author         Me
+==/UserStyle== */
+
+@-moz-document domain("twitch.tv") {
+  @font-face {
+    font-family: "Product Sans";
+    font-style: normal;
+    font-weight: 400;
+    src: local('Product Sans'), url(https://fonts.cdnfonts.com/s/13998/ProductSans-Regular.woff) format('woff')
+  }
+
+  * {
+    font-size: 12px;
+  }
+
+  *:not(.text-token) {
+    font-family: 'Bahnschrift Light', 'Product Sans', 'MesloLGS NF' !important;
+  }
+
+  /* Keeping the chat to use Twitch's font
+	 * as some ascii text can sometimes be broken with custom fonts */
+  .text-token {
+    font-family: "Inter" !important;
+    color: #ffb0f0;
+  }
+
+  /* Chat scrollable area */
+  section[data-test-selector="chat-room-component-layout"] .chat-scrollable-area__message-container,
+  .whispers .thread-message__message,
+  .video-chat__message {
+    margin-bottom: 1em;
+  }
+
+  /* Emote Menu Button - for Future Funk Theme */
+  .bttv-EmoteMenu-module__button-luW4x {
+    filter: hue-rotate(140deg);
+  }
+
+  #twilight-sticky-footer-root {
+    display: none;
+  }
+
+  .seventv-emote-set[data-v-f9258bfc] {
+    width: 275px;
+  }
+
+  .kNyuUv {
+    margin-right: 4rem;
+  }
+
+  /* Hype Train Timer */
+  .hype-train-progress-bar-info-view__timer {
+    color: #ffcaff !important;
+  }
+
+  .scrollbar-thumb {
+    background-color: #ffc0cb70 !important
+  }
+
+  /*7tv chat username*/
+  .seventv-chat-user .seventv-chat-user-username span span {
+    background: color-mix(in srgb, currentColor 25%, #ffffff15);
+    padding: 2px;
+    border-radius: 4px;
+  }
+
+  /*7tv emote token*/
+  .seventv-user-message:has(.emote-token) {
+    position: relative;
+    padding: 3px 0;
+    z-index: 1;
+  }
+
+  /*Chat alternate background*/
+  .seventv-chat-list>div:nth-child(odd),
+  .fZajyj>div:nth-child(odd),
+  .fZajyj>li:nth-child(odd) {
+    background: #38032c
+  }
+
+  .seventv-chat-list>li:nth-child(even),
+  .fZajyj>div:nth-child(even),
+  .fZajyj>li:nth-child(even) {
+    background: #26031b
+  }
+
+  .bQEtql:has(img[alt="Subscriber"]),
+  .bQEtql:has(img[alt="2-Month Subscriber"]),
+  .bQEtql:has(img[alt="3-Month Subscriber"]),
+  .bQEtql:has(img[alt="4-Month Subscriber"]),
+  .bQEtql:has(img[alt="5-Month Subscriber"]),
+  .bQEtql:has(img[alt="6-Month Subscriber"]),
+  .bQEtql:has(img[alt="7-Month Subscriber"]),
+  .bQEtql:has(img[alt="8-Month Subscriber"]),
+  .bQEtql:has(img[alt="9-Month Subscriber"]),
+  .bQEtql:has(img[alt="10-Month Subscriber"]),
+  .bQEtql:has(img[alt="11-Month Subscriber"]),
+  .bQEtql:has(img[alt="1-Year Subscriber"]),
+  .bQEtql:has(img[alt="1.5-Year Subscriber"]),
+  .bQEtql:has(img[alt="2-Year Subscriber"]),
+  .bQEtql:has(img[alt="2.5-Year Subscriber"]),
+  .bQEtql:has(img[alt="3-Year Subscriber"]),
+  .bQEtql:has(img[alt="3.5-Year Subscriber"]),
+  .bQEtql:has(img[alt="4-Year Subscriber"]),
+  .bQEtql:has(img[alt="4.5-Year Subscriber"]),
+  .bQEtql:has(img[alt="5-Year Subscriber"]),
+  .bQEtql:has(img[alt="5.5-Year Subscriber"]),
+  .bQEtql:has(img[alt="6-Year Subscriber"]),
+  .bQEtql:has(img[alt="6.5-Year Subscriber"]),
+  .bQEtql:has(img[alt="7-Year Subscriber"]),
+  .bQEtql:has(img[alt="7.5-Year Subscriber"]),
+  .bQEtql:has(img[alt="8-Year Subscriber"]),
+  .bQEtql:has(img[alt="8.5-Year Subscriber"]),
+  .bQEtql:has(img[alt="9-Year Subscriber"]),
+  .bQEtql:has(img[alt="9.5-Year Subscriber"]),
+  .bQEtql:has(img[alt="10-Year Subscriber"]),
+  .bQEtql:has(img[alt="10.5-Year Subscriber"]),
+  .seventv-message:has(img[alt="Subscriber"]),
+  .seventv-message:has(img[alt="2-Month Subscriber"]),
+  .seventv-message:has(img[alt="3-Month Subscriber"]),
+  .seventv-message:has(img[alt="4-Month Subscriber"]),
+  .seventv-message:has(img[alt="5-Month Subscriber"]),
+  .seventv-message:has(img[alt="6-Month Subscriber"]),
+  .seventv-message:has(img[alt="7-Month Subscriber"]),
+  .seventv-message:has(img[alt="8-Month Subscriber"]),
+  .seventv-message:has(img[alt="9-Month Subscriber"]),
+  .seventv-message:has(img[alt="10-Month Subscriber"]),
+  .seventv-message:has(img[alt="11-Month Subscriber"]),
+  .seventv-message:has(img[alt="1-Year Subscriber"]),
+  .seventv-message:has(img[alt="1.5-Year Subscriber"]),
+  .seventv-message:has(img[alt="2-Year Subscriber"]),
+  .seventv-message:has(img[alt="2.5-Year Subscriber"]),
+  .seventv-message:has(img[alt="3-Year Subscriber"]),
+  .seventv-message:has(img[alt="3.5-Year Subscriber"]),
+  .seventv-message:has(img[alt="4-Year Subscriber"]),
+  .seventv-message:has(img[alt="4.5-Year Subscriber"]),
+  .seventv-message:has(img[alt="5-Year Subscriber"]),
+  .seventv-message:has(img[alt="5.5-Year Subscriber"]),
+  .seventv-message:has(img[alt="6-Year Subscriber"]),
+  .seventv-message:has(img[alt="6.5-Year Subscriber"]),
+  .seventv-message:has(img[alt="7-Year Subscriber"]),
+  .seventv-message:has(img[alt="7.5-Year Subscriber"]),
+  .seventv-message:has(img[alt="8-Year Subscriber"]),
+  .seventv-message:has(img[alt="8.5-Year Subscriber"]),
+  .seventv-message:has(img[alt="9-Year Subscriber"]),
+  .seventv-message:has(img[alt="9.5-Year Subscriber"]),
+  .seventv-message:has(img[alt="10-Year Subscriber"]),
+  .seventv-message:has(img[alt="10.5-Year Subscriber"]),
+  .seventv-chat-vod-message-patched:has(img[alt="Subscriber"]),
+  .seventv-chat-vod-message-patched:has(img[alt="2-Month Subscriber"]),
+  .seventv-chat-vod-message-patched:has(img[alt="3-Month Subscriber"]),
+  .seventv-chat-vod-message-patched:has(img[alt="4-Month Subscriber"]),
+  .seventv-chat-vod-message-patched:has(img[alt="5-Month Subscriber"]),
+  .seventv-chat-vod-message-patched:has(img[alt="6-Month Subscriber"]),
+  .seventv-chat-vod-message-patched:has(img[alt="7-Month Subscriber"]),
+  .seventv-chat-vod-message-patched:has(img[alt="8-Month Subscriber"]),
+  .seventv-chat-vod-message-patched:has(img[alt="9-Month Subscriber"]),
+  .seventv-chat-vod-message-patched:has(img[alt="10-Month Subscriber"]),
+  .seventv-chat-vod-message-patched:has(img[alt="11-Month Subscriber"]),
+  .seventv-chat-vod-message-patched:has(img[alt="1-Year Subscriber"]),
+  .seventv-chat-vod-message-patched:has(img[alt="1.5-Year Subscriber"]),
+  .seventv-chat-vod-message-patched:has(img[alt="2-Year Subscriber"]),
+  .seventv-chat-vod-message-patched:has(img[alt="2.5-Year Subscriber"]),
+  .seventv-chat-vod-message-patched:has(img[alt="3-Year Subscriber"]),
+  .seventv-chat-vod-message-patched:has(img[alt="3.5-Year Subscriber"]),
+  .seventv-chat-vod-message-patched:has(img[alt="4-Year Subscriber"]),
+  .seventv-chat-vod-message-patched:has(img[alt="4.5-Year Subscriber"]),
+  .seventv-chat-vod-message-patched:has(img[alt="5-Year Subscriber"]),
+  .seventv-chat-vod-message-patched:has(img[alt="5.5-Year Subscriber"]),
+  .seventv-chat-vod-message-patched:has(img[alt="6-Year Subscriber"]),
+  .seventv-chat-vod-message-patched:has(img[alt="6.5-Year Subscriber"]),
+  .seventv-chat-vod-message-patched:has(img[alt="7-Year Subscriber"]),
+  .seventv-chat-vod-message-patched:has(img[alt="7.5-Year Subscriber"]),
+  .seventv-chat-vod-message-patched:has(img[alt="8-Year Subscriber"]),
+  .seventv-chat-vod-message-patched:has(img[alt="8.5-Year Subscriber"]),
+  .seventv-chat-vod-message-patched:has(img[alt="9-Year Subscriber"]),
+  .seventv-chat-vod-message-patched:has(img[alt="9.5-Year Subscriber"]),
+  .seventv-chat-vod-message-patched:has(img[alt="10-Year Subscriber"]),
+  .seventv-chat-vod-message-patched:has(img[alt="10.5-Year Subscriber"]) {
+    background: linear-gradient(90deg, rgb(64, 0, 0) 0%, rgb(70, 68, 0) 25%, rgb(0, 30, 4) 50%, rgb(0, 58, 81) 75%, rgb(64, 0, 62) 97%, #ff70e49e 98.5%, #ff70e4a6 100%);
+  }
+
+  .sub-part {
+    background: #ff1fc440;
+    border-radius: 4px;
+  }
+
+  .seventv-chat-vod-message-patched:has(img[alt="Moderator"]) {
+    background: linear-gradient(90deg, rgb(0, 50, 0) 0%, rgb(0, 50, 0) 97%, rgb(0, 255, 0) 100%);
+  }
+
+  .seventv-message:has(img[alt="Listening only"]),
+  .seventv-message:has(img[alt="Watching without audio"]),
+  .seventv-chat-vod-message-patched:has(img[alt="Listening only"]),
+  .seventv-chat-vod-message-patched:has(img[alt="Watching without audio"]) {
+    background: #000;
+  }
+
+  /* VOD Timestamp */
+  .seventv-chat-vod-message-wrapper .seventv-chat-vod-message-timestamp {
+    position: relative;
+    left: -8px;
+    align-self: center;
+    height: 45%;
+    font-size: 8px !important;
+    transform: rotate(30deg);
+  }
+
+  .seventv-chat-vod-message-wrapper .seventv-user-message {
+    position: relative;
+    left: -10px;
+    width: 105%;
+  }
+
+  /*Chat - resume auto scroll button*/
+  .seventv-message-buffer-notice,
+  .video-chat__sync-button {
+    z-index: 2;
+  }
+}
