@@ -1,1 +1,1 @@
-# Twitch-Alternate-Chat
+# Twitch Chat Alternate
