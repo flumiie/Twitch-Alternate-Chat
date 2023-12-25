@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name          	Twitch Chat Alternate
 @namespace      twitch.tv
-@version        1.1.2
+@version        1.1.3
 @description	Alternating chat style for Twitch.TV. Don't forget to install 7TV & BTTV extension for a better twitch chat experience
 @author         flumiie
 @preprocessor   uso
@@ -17,6 +17,7 @@
 }
 @advanced     color odd-color "Odd Color" #38032c
 @advanced     color even-color "Even Color" #26031b
+@advanced     color first-time-chatter-color "First Time Message Color" #253a39
 ==/UserStyle== */
 
 @-moz-document domain("twitch.tv") {
@@ -94,8 +95,7 @@
 	.seventv-chat-list>li:nth-child(odd),
 	.fZajyj>div:nth-child(odd),
 	.fZajyj>li:nth-child(odd) {
-		background:
-			/*[[odd-color]]*/
+		background: /*[[odd-color]]*/;
 	}
 
 	.chat-scrollable-area__message-container>div:nth-child(even),
@@ -103,8 +103,11 @@
 	.seventv-chat-list>li:nth-child(even),
 	.fZajyj>div:nth-child(even),
 	.fZajyj>li:nth-child(even) {
-		background:
-			/*[[even-color]]*/
+		background: /*[[even-color]]*/;
+	}
+
+	.seventv-chat-list span div:has([data-highlight-label="First Message"]) {
+		background: /*[[first-time-chatter-color]]*/;
 	}
 
 	.bQEtql:has(img[alt="Subscriber"]),
