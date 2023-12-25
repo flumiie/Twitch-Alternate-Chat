@@ -1,9 +1,21 @@
 /* ==UserStyle==
-@name           ? - Dec 2023
-@namespace      github.com/openstyles/stylus
-@version        1.0.0
-@description    A new userstyle
-@author         Me
+@name          	Twitch Chat Alternate
+@namespace		twitch.tv
+@version        1.1.0
+@description	Alternating chat style for Twitch.TV. Don't forget to install 7TV & BTTV extension for a better twitch chat experience
+@author         flumiie
+@preprocessor   uso
+@license        CC0 - Public Domain
+@homepageURL    https://github.com/flumiie/Twitch-Chat-Alternate
+@updateURL      https://raw.githubusercontent.com/flumiie/Twitch-Chat-Alternate/main/main.css
+
+@advanced dropdown font-face "Site Font" {
+	video-background "Bahnschrift Light" <<<EOT "Bahnschrift Light" EOT;
+	video-background "Product Sans" <<<EOT "Product Sans" EOT;
+	video-background "MesloLGS NF" <<<EOT "MesloLGS NF" EOT;
+}
+@advanced     color odd-color "Odd Color" #38032c
+@advanced     color even-color "Even Color" #26031b
 ==/UserStyle== */
 
 @-moz-document domain("twitch.tv") {
@@ -14,17 +26,16 @@
     src: local('Product Sans'), url(https://fonts.cdnfonts.com/s/13998/ProductSans-Regular.woff) format('woff')
   }
 
-  * {
-    font-size: 12px;
-  }
-
   *:not(.text-token) {
-    font-family: 'Bahnschrift Light', 'Product Sans', 'MesloLGS NF' !important;
+    font-family:
+      /*[[font-face]]*/
+      !important;
   }
 
   /* Keeping the chat to use Twitch's font
 	 * as some ascii text can sometimes be broken with custom fonts */
   .text-token {
+    font-size: 12px;
     font-family: "Inter" !important;
     color: #ffb0f0;
   }
@@ -64,7 +75,7 @@
 
   /*7tv chat username*/
   .seventv-chat-user .seventv-chat-user-username span span {
-    background: color-mix(in srgb, currentColor 25%, #ffffff15);
+    background: color-mix(in srgb, currentColor 17%, #ffffff15);
     padding: 2px;
     border-radius: 4px;
   }
@@ -77,16 +88,22 @@
   }
 
   /*Chat alternate background*/
+  .chat-scrollable-area__message-container>div:nth-child(odd),
   .seventv-chat-list>div:nth-child(odd),
+  .seventv-chat-list>li:nth-child(odd),
   .fZajyj>div:nth-child(odd),
   .fZajyj>li:nth-child(odd) {
-    background: #38032c
+    background:
+      /*[[odd-color]]*/
   }
 
+  .chat-scrollable-area__message-container>div:nth-child(even),
+  .seventv-chat-list>div:nth-child(even),
   .seventv-chat-list>li:nth-child(even),
   .fZajyj>div:nth-child(even),
   .fZajyj>li:nth-child(even) {
-    background: #26031b
+    background:
+      /*[[even-color]]*/
   }
 
   .bQEtql:has(img[alt="Subscriber"]),
