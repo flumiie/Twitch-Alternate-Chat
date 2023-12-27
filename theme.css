@@ -202,23 +202,19 @@
 	.seventv-chat-vod-message-patched:has(img[alt="10.5-Year Subscriber"]) {
 		background: linear-gradient(90deg, rgb(64, 0, 0) 0%, rgb(70, 68, 0) 25%, rgb(0, 30, 4) 50%, rgb(0, 58, 81) 75%, rgb(64, 0, 62) 97%, #ff70e49e 98.5%, #ff70e4a6 100%);
 	}
-
 	.sub-part {
 		background: #ff1fc440;
 		border-radius: 4px;
 		padding: 4px 16px;
 	}
-
-	.seventv-message:has(img[alt="Moderator"]),
-	.seventv-chat-vod-message-patched:has(img[alt="Moderator"]) {
-		background: linear-gradient(90deg, rgb(0, 50, 0) 0%, rgb(0, 50, 0) 97%, rgb(0, 255, 0) 100%);
-	}
-
 	.seventv-message:has(img[alt="Verified"]),
 	.seventv-chat-vod-message-patched:has(img[alt="Verified"]) {
 		background: linear-gradient(90deg, rgb(59, 0, 100) 0%, rgb(59, 0, 100) 97%, rgb(150, 0, 255) 100%);
 	}
-
+	.seventv-message:has(img[alt="Moderator"]),
+	.seventv-chat-vod-message-patched:has(img[alt="Moderator"]) {
+		background: linear-gradient(90deg, rgb(0, 50, 0) 0%, rgb(0, 50, 0) 97%, rgb(0, 255, 0) 100%);
+	}
 	.seventv-message:has(img[alt="Listening only"]),
 	.seventv-message:has(img[alt="Watching without audio"]),
 	.seventv-chat-vod-message-patched:has(img[alt="Listening only"]),
