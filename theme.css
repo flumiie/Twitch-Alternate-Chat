@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name          	Twitch Chat Alternate
 @namespace      twitch.tv
-@version        1.1.5
+@version        1.1.6
 @description	Alternating chat style for Twitch.TV. Don't forget to install 7TV & BTTV extension for a better twitch chat experience
 @author         flumiie
 @preprocessor   uso
@@ -51,8 +51,8 @@
 		filter: hue-rotate(140deg);
 	}
 
-	#twilight-sticky-footer-root {
-		display: none;
+	#twilight-sticky-footer-root div {
+		margin: -0.5em 0;
 	}
 
 	.seventv-emote-set[data-v-f9258bfc] {
