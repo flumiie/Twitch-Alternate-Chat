@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name          	Twitch Chat Alternate
 @namespace      twitch.tv
-@version        1.1.6
+@version        1.1.6.1
 @description	Alternating chat style for Twitch.TV. Don't forget to install 7TV & BTTV extension for a better twitch chat experience
 @author         flumiie
 @preprocessor   uso
@@ -16,7 +16,7 @@
 }
 @advanced     color odd-color "Odd Color" #38032c
 @advanced     color even-color "Even Color" #26031b
-@advanced     color first-time-chatter-color "First Time Message Color" #253a39
+@advanced     color first-time-chatter-color "First Time Message Color" #c832c815
 ==/UserStyle== */
 
 @-moz-document domain("twitch.tv") {
@@ -52,7 +52,7 @@
 	}
 
 	#twilight-sticky-footer-root div {
-		margin: -0.5em 0;
+		margin: -1px 0;
 	}
 
 	.seventv-emote-set[data-v-f9258bfc] {
@@ -202,11 +202,6 @@
 	.seventv-chat-vod-message-patched:has(img[alt="10.5-Year Subscriber"]) {
 		background: linear-gradient(90deg, rgb(64, 0, 0) 0%, rgb(70, 68, 0) 25%, rgb(0, 30, 4) 50%, rgb(0, 58, 81) 75%, rgb(64, 0, 62) 97%, #ff70e49e 98.5%, #ff70e4a6 100%);
 	}
-	.sub-part {
-		background: #ff1fc440;
-		border-radius: 4px;
-		padding: 4px 16px;
-	}
 	.seventv-message:has(img[alt="Verified"]),
 	.seventv-chat-vod-message-patched:has(img[alt="Verified"]) {
 		background: linear-gradient(90deg, rgb(59, 0, 100) 0%, rgb(59, 0, 100) 97%, rgb(150, 0, 255) 100%);
@@ -220,6 +215,10 @@
 	.seventv-chat-vod-message-patched:has(img[alt="Listening only"]),
 	.seventv-chat-vod-message-patched:has(img[alt="Watching without audio"]) {
 		background: #000;
+	}
+	span:has(> div.sub-part) {
+		background: #ff1fc440 !important;
+		/* 		padding: 4px 16px; */
 	}
 
 	/* VOD Timestamp */
