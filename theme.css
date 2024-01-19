@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name          	Twitch Chat Alternate
 @namespace      twitch.tv
-@version        1.1.6.1
+@version        1.1.7
 @description	Alternating chat style for Twitch.TV. Don't forget to install 7TV & BTTV extension for a better twitch chat experience
 @author         flumiie
 @preprocessor   uso
@@ -210,6 +210,10 @@
 	.seventv-chat-vod-message-patched:has(img[alt="Moderator"]) {
 		background: linear-gradient(90deg, rgb(0, 50, 0) 0%, rgb(0, 50, 0) 97%, rgb(0, 255, 0) 100%);
 	}
+	.seventv-message:has(img[alt="Broadcaster"]),
+	.seventv-chat-vod-message-patched:has(img[alt="Broadcaster"]) {
+		background: linear-gradient(90deg, rgb(100, 0, 0) 0%, rgb(100, 0, 0) 97%, rgb(255, 100, 100) 100%);
+	}
 	.seventv-message:has(img[alt="Listening only"]),
 	.seventv-message:has(img[alt="Watching without audio"]),
 	.seventv-chat-vod-message-patched:has(img[alt="Listening only"]),
@@ -218,7 +222,7 @@
 	}
 	span:has(> div.sub-part) {
 		background: #ff1fc440 !important;
-		/* 		padding: 4px 16px; */
+		margin: -4px 0;
 	}
 
 	/* VOD Timestamp */
