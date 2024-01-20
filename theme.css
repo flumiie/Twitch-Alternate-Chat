@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name          	Twitch Chat Alternate
 @namespace      twitch.tv
-@version        1.2
+@version        1.2.0.1
 @description	Alternating chat style for Twitch.TV. Don't forget to install 7TV & BTTV extension for a better twitch chat experience
 @author         flumiie
 @preprocessor   uso
@@ -224,7 +224,7 @@
 	}
 	span:has(> div.sub-part) {
 		background: /*[[subbed-part-color]]*/ !important;
-		margin: -4px 0;
+		margin: 2px 0 !important;
 	}
 
 	/* VOD Timestamp */
