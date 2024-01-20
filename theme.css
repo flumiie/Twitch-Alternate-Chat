@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name          	Twitch Chat Alternate
 @namespace      twitch.tv
-@version        1.1.7
+@version        1.2
 @description	Alternating chat style for Twitch.TV. Don't forget to install 7TV & BTTV extension for a better twitch chat experience
 @author         flumiie
 @preprocessor   uso
@@ -17,6 +17,8 @@
 @advanced     color odd-color "Odd Color" #38032c
 @advanced     color even-color "Even Color" #26031b
 @advanced     color first-time-chatter-color "First Time Message Color" #c832c815
+@advanced     color audio-only-chatter-color "First Time Message Color" #000
+@advanced     color subbed-part-color "Subbed Color" #ff1fc440
 ==/UserStyle== */
 
 @-moz-document domain("twitch.tv") {
@@ -218,10 +220,10 @@
 	.seventv-message:has(img[alt="Watching without audio"]),
 	.seventv-chat-vod-message-patched:has(img[alt="Listening only"]),
 	.seventv-chat-vod-message-patched:has(img[alt="Watching without audio"]) {
-		background: #000;
+		background: /*[[audio-only-chatter-color]]*/ !important;
 	}
 	span:has(> div.sub-part) {
-		background: #ff1fc440 !important;
+		background: /*[[subbed-part-color]]*/ !important;
 		margin: -4px 0;
 	}
 
