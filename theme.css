@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name          	Twitch Chat Alternate
 @namespace      twitch.tv
-@version        1.2.0.1
+@version        1.2.0.2
 @description	Alternating chat style for Twitch.TV. Don't forget to install 7TV & BTTV extension for a better twitch chat experience
 @author         flumiie
 @preprocessor   uso
@@ -17,7 +17,7 @@
 @advanced     color odd-color "Odd Color" #38032c
 @advanced     color even-color "Even Color" #26031b
 @advanced     color first-time-chatter-color "First Time Message Color" #c832c815
-@advanced     color audio-only-chatter-color "First Time Message Color" #000
+@advanced     color audio-only-chatter-color "Audio Only Message Color" #000
 @advanced     color subbed-part-color "Subbed Color" #ff1fc440
 ==/UserStyle== */
 
