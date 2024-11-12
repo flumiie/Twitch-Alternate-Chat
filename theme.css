@@ -1,24 +1,25 @@
 /* ==UserStyle==
 @name          	Twitch Chat Alternate
 @namespace      twitch.tv
-@version        1.2.0.2
-@description	Alternating chat style for Twitch.TV. Don't forget to install 7TV & BTTV extension for a better twitch chat experience
+@version        1.3
+@description	Alternating chat style for Twitch.TV. Don't forget to install 7TV & BTTV extension for a better twitch chat experience. Get "Twitch Pinky" for a whole site theming
 @author         flumiie
 @preprocessor   uso
 @license        CC0 - Public Domain
 @homepageURL    https://github.com/flumiie/Twitch-Chat-Alternate
 
+@advanced checkbox show-ad-banner "Show Ads" 0
 @advanced dropdown font-face "Site Font" {
 	font-face-bahnscrift "Bahnschrift Light" <<<EOT Bahnschrift Light EOT;
 	font-face-productsans "Product Sans" <<<EOT Product Sans EOT;
 	font-face-meslolgs "MesloLGS NF" <<<EOT MesloLGS NF EOT;
 	font-face-default "Default" <<<EOT Inter EOT;
 }
-@advanced     color odd-color "Odd Color" #38032c
-@advanced     color even-color "Even Color" #26031b
-@advanced     color first-time-chatter-color "First Time Message Color" #c832c815
-@advanced     color audio-only-chatter-color "Audio Only Message Color" #000
-@advanced     color subbed-part-color "Subbed Color" #ff1fc440
+@advanced color odd-color "Odd Color" #38032c
+@advanced color even-color "Even Color" #26031b
+@advanced color first-time-chatter-color "First Time Message Color" #c832c815
+@advanced color audio-only-chatter-color "Audio Only Message Color" #000
+@advanced color subbed-part-color "Subbed Color" #ff1fc440
 ==/UserStyle== */
 
 @-moz-document domain("twitch.tv") {
@@ -28,11 +29,9 @@
 		font-weight: 400;
 		src: local('Product Sans'), url(https://fonts.cdnfonts.com/s/13998/ProductSans-Regular.woff) format('woff')
 	}
-
 	*:not(.text-token) {
 		font-family: /*[[font-face]]*/, "Inter" !important;
 	}
-
 	/* Keeping the chat to use Twitch's font
 	 * as some ascii text can sometimes be broken with custom fonts */
 	.text-token {
@@ -47,20 +46,16 @@
 	.video-chat__message {
 		margin-bottom: 1em;
 	}
-
 	/* Emote Menu Button - for Future Funk Theme */
 	.bttv-EmoteMenu-module__button-luW4x {
 		filter: hue-rotate(140deg);
 	}
-
 	#twilight-sticky-footer-root div {
-		margin: -1px 0;
+		margin: -1.5px 0;
 	}
-
 	.seventv-emote-set[data-v-f9258bfc] {
 		width: 275px;
 	}
-
 	.kNyuUv {
 		margin-right: 4rem;
 	}
@@ -89,22 +84,20 @@
 	}
 
 	/*Chat alternate background*/
-	.chat-scrollable-area__message-container>div:nth-child(odd),
-	.seventv-chat-list>div:nth-child(odd),
-	.seventv-chat-list>li:nth-child(odd),
-	.fZajyj>div:nth-child(odd),
-	.fZajyj>li:nth-child(odd) {
-		background: /*[[odd-color]]*/;
+	.chat-scrollable-area__message-container > div:nth-child(odd),
+	.seventv-chat-list > div:nth-child(odd),
+	.seventv-chat-list > li:nth-child(odd),
+	.fZajyj > div:nth-child(odd),
+	.fZajyj > li:nth-child(odd) {
+		background: /*[[odd-color]]*/
 	}
-
-	.chat-scrollable-area__message-container>div:nth-child(even),
-	.seventv-chat-list>div:nth-child(even),
-	.seventv-chat-list>li:nth-child(even),
-	.fZajyj>div:nth-child(even),
-	.fZajyj>li:nth-child(even) {
-		background: /*[[even-color]]*/;
+	.chat-scrollable-area__message-container > div:nth-child(even),
+	.seventv-chat-list > div:nth-child(even),
+	.seventv-chat-list > li:nth-child(even),
+	.fZajyj > div:nth-child(even),
+	.fZajyj > li:nth-child(even) {
+		background: /*[[even-color]]*/
 	}
-
 	.seventv-chat-list span div:has([data-highlight-label="First Message"]) {
 		background: /*[[first-time-chatter-color]]*/;
 	}
@@ -204,18 +197,28 @@
 	.seventv-chat-vod-message-patched:has(img[alt="10.5-Year Subscriber"]) {
 		background: linear-gradient(90deg, rgb(64, 0, 0) 0%, rgb(70, 68, 0) 25%, rgb(0, 30, 4) 50%, rgb(0, 58, 81) 75%, rgb(64, 0, 62) 97%, #ff70e49e 98.5%, #ff70e4a6 100%);
 	}
+	.vod-message:has(img[alt="Verified"]),
+	.Layout-sc-1xcs6mc-0 > div.chat-line__message:has(img[alt="Verified"]),
 	.seventv-message:has(img[alt="Verified"]),
 	.seventv-chat-vod-message-patched:has(img[alt="Verified"]) {
 		background: linear-gradient(90deg, rgb(59, 0, 100) 0%, rgb(59, 0, 100) 97%, rgb(150, 0, 255) 100%);
 	}
+	.vod-message:has(img[alt="Moderator"]),
+	.Layout-sc-1xcs6mc-0 > div.chat-line__message:has(img[alt="Moderator"]),
 	.seventv-message:has(img[alt="Moderator"]),
 	.seventv-chat-vod-message-patched:has(img[alt="Moderator"]) {
 		background: linear-gradient(90deg, rgb(0, 50, 0) 0%, rgb(0, 50, 0) 97%, rgb(0, 255, 0) 100%);
 	}
+	.vod-message:has(img[alt="Broadcaster"]),
+	.Layout-sc-1xcs6mc-0 > div.chat-line__message:has(img[alt="Broadcaster"]),
 	.seventv-message:has(img[alt="Broadcaster"]),
 	.seventv-chat-vod-message-patched:has(img[alt="Broadcaster"]) {
 		background: linear-gradient(90deg, rgb(100, 0, 0) 0%, rgb(100, 0, 0) 97%, rgb(255, 100, 100) 100%);
 	}
+	.vod-message:has(img[alt="Listening only"]),
+	.vod-message:has(img[alt="Watching without audio"]),
+	.Layout-sc-1xcs6mc-0 > div.chat-line__message:has(img[alt="Listening only"]),
+	.Layout-sc-1xcs6mc-0 > div.chat-line__message:has(img[alt="Watching without audio"]),
 	.seventv-message:has(img[alt="Listening only"]),
 	.seventv-message:has(img[alt="Watching without audio"]),
 	.seventv-chat-vod-message-patched:has(img[alt="Listening only"]),
@@ -236,7 +239,6 @@
 		font-size: 8px !important;
 		transform: rotate(30deg);
 	}
-
 	.seventv-chat-vod-message-wrapper .seventv-user-message {
 		position: relative;
 		left: -10px;
@@ -247,5 +249,13 @@
 	.seventv-message-buffer-notice,
 	.video-chat__sync-button {
 		z-index: 2;
+	}
+	
+	/* 	Ad Banners */
+	.haGrcr > div:nth-child(1),
+	.Layout-sc-1xcs6mc-0.jPmKIH,
+	.stream-display-ad__container_lower-third {
+		height: /*[[show-ad-banner]]*/ !important;
+		opacity: /*[[show-ad-banner]]*/ !important
 	}
 }
